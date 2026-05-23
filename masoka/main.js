@@ -48,6 +48,14 @@ document.getElementById("email").innerHTML =
 const callModalBackdrop = document.getElementById("callModalBackdrop");
 const callModalClose = document.getElementById("callModalClose");
 
+// Desktop nav active link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".nav-links a").forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
 // Hamburger menu
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
